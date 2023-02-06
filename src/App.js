@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Component from "./component";
+
+import "./App.css";
+
+const ANAKIN_IMAGE =
+  "https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/5cc8e25abe35637188b089c6a1b2240c/large.png";
+
+const RAY_IMAGE =
+  "https://cdn.images.express.co.uk/img/dynamic/36/590x/Star-Wars-rey-skywalker-1680105.jpg?r=1665307180383";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Component
+        author={{
+          name: "Anakin skywalker",
+          photo: ANAKIN_IMAGE,
+          nickname: "@dart_vader",
+        }}
+        content="WTF? Who is Ray? Why she is Skywalker? Luke...?"
+        image={RAY_IMAGE}
+        date={"26 лютого"}
+      />
     </div>
   );
 }
